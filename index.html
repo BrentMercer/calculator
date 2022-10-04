@@ -1,16 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Page Title</title>
-    <script src="script.js"></script>
+    <title>Calculator</title>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+<main class="main">
+    <div class="calculator">
+        <div id="screen" class="screen">
+            <div class="screen-last" id="lastOperationScreen"></div>
+            <div class="screen-current" id="currentOperationScreen">0</div>
+        </div>
+        <div id="buttons-grid" class="buttons-grid">
+            <button
+                    class="btn btn-red span-2"
+                    id="clearBtn"
+                    onclick="clearPress();"
+            >
+                CLEAR
+            </button>
+            <button
+                    class="btn btn-blue span-2"
+                    id="deleteBtn"
+                    onclick="deletePress();"
+            >
+                DELETE
+            </button>
+            <button class="btn" onclick="numberPress(this);">7</button>
+            <button class="btn" onclick="numberPress(this);">8</button>
+            <button class="btn" onclick="numberPress(this);">9</button>
+            <button class="btn" onclick="divide();" data-operator>÷</button>
+            
+            <button class="btn" onclick="numberPress(this);">4</button>
+            <button class="btn" onclick="numberPress(this);">5</button>
+            <button class="btn" onclick="numberPress(this);">6</button>
+            <button class="btn" onclick="multiply();" data-operator>x</button>
+            
+            <button class="btn" onclick="numberPress(this);">1</button>
+            <button class="btn" onclick="numberPress(this);">2</button>
+            <button class="btn" onclick="numberPress(this);">3</button>
+            <button class="btn" onclick="subtract();" data-operator>-</button>
+            
+            <button class="btn" onclick="numberPress(this);">.</button>
+            <button class="btn" onclick="numberPress(this);">0</button>
+            <button class="btn" onclick="equalsPress();">=</button>
+            <button class="btn" onclick="add();" data-operator>+</button>
+            
+        </div>
+    </div>
+</main>
+<footer></footer>
 
-
-<script>
-    
-</script>
+<script></script>
 </body>
+
 </html>
